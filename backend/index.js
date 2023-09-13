@@ -10,6 +10,6 @@ app.listen(PORT, () => {
 
 app.get("/api", (req, res) => {
   res.json({
-    message: "Hello from backend!",
+    message: "Hello GROUP #4 from backend!",
   });
 });
