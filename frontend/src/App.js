@@ -18,7 +18,6 @@ function App() {
 
   return (
     <>
-      <p>{data}</p>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Login />} />
@@ -28,6 +27,7 @@ function App() {
           <Route path="recommended" element={<RecommendedFood />} />
         </Route>
       </Routes>
+      <p>{data}</p>
     </>
   );
 }
