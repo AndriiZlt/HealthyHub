@@ -1,6 +1,11 @@
 import React, { useState, useEffect } from "react";
-import logo from "./logo.svg";
-import "./App.css";
+import { Routes, Route } from "react-router-dom";
+import Layout from "./components/Layout/Layout";
+import Login from "./components/Login/Login";
+import Home from "./components/Home/Home";
+import Dashboard from "./components/Dashboard/Dashboard";
+import Diary from "./components/Diary/Diary";
+import RecommendedFood from "./components/RecommendedFood/RecommendedFood";
 
 function App() {
   const [data, setData] = useState("");
@@ -10,13 +15,20 @@ function App() {
       .then((res) => res.json())
       .then((res) => setData(res.message));
   }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p> {!data ? "Loading..." : data}</p>
-      </header>
-    </div>
+    <>
+      <p>{data}</p>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Login />} />
+          <Route path="home" element={<Home />} />
+          <Route path="dashboard" element={<Dashboard />} />
+          <Route path="diary" element={<Diary />} />
+          <Route path="recommended" element={<RecommendedFood />} />
+        </Route>
+      </Routes>
+    </>
   );
 }
 
