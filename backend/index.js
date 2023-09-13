@@ -17,3 +17,5 @@ app.get("/api", (req, res) => {
     message: "Hello GROUP #4 from backend!",
   });
 });
+
+module.exports = app;
