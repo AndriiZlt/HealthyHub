@@ -1,6 +1,7 @@
 {
   "name": "healthyhub",
   "version": "1.0.0",
+  "homepage": "https://AndriiZlt.github.io/HealthyHub/",
   "description": "",
   "main": "index.js",
   "scripts": {
